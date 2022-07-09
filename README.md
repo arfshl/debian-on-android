@@ -16,4 +16,4 @@ Run Debian/Ubuntu XFCE without root on Android with Termux
 **NOTE:Execute this command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 ### XFCE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/desktop.sh && sh desktop.sh && rm desktop.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/xfce.sh && sh xfce.sh && rm xfce.sh
