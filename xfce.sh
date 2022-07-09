@@ -2,7 +2,7 @@
 # This script is modification of https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/de-apt-xfce4.sh (Licensed under GPL-2.0)
 echo 'Installing XFCE, please wait...'
 apt-get update
-apt-get install xfce4 xfce4-terminal tightvncserver xfe dbus-x11 -y
+apt-get install xfce4 tightvncserver dbus-x11 -y
 apt-get clean
 echo 'Setting up XFCE, please wait...'
 mkdir ~/.vnc
