@@ -13,7 +13,7 @@ Script to install Debian/Ubuntu on Termux
       pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/debian -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
 
 ## Install Desktop Environment
-**NOTE:Execute this command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
+**NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 ### XFCE
 
       apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/xfce.sh && sh xfce.sh && rm xfce.sh
@@ -25,3 +25,7 @@ Script to install Debian/Ubuntu on Termux
 ### LXQt
 
       apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
+
+### LXDE
+
+     apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
