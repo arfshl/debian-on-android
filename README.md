@@ -1,4 +1,4 @@
-L# debian-on-android
+# debian-on-android
 Script to install Debian/Ubuntu on Termux
 ## You Need
 - [Termux](https://f-droid.org/packages/com.termux)
