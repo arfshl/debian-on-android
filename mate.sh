@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Apt/Mate/de-apt-mate.sh (Licensed under GPL-2.0)
 echo 'Installing MATE, please wait...'
-apt-get install mate-desktop-environment-core mate-terminal tigervnc-standalone-server dbus-x11 -y
+apt-get install mate-desktop-environment-core tigervnc-standalone-server dbus-x11 -y
 apt-get clean
 echo 'Setting up MATE, please wait...'
 mkdir ~/.vnc
