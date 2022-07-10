@@ -1,14 +1,14 @@
 #!/bin/sh
-# This script is modification of https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/de-apt-xfce4.sh (Licensed under GPL-2.0)
+# This script is modification of  (Licensed under MIT)
 echo 'Installing XFCE, please wait...'
 apt-get update
-apt-get install xfce4 tightvncserver dbus-x11 -y
+apt-get install xfce4 xfce4-terminal tigervnc-standalone-server dbus-x11 -y
 apt-get clean
 echo 'Setting up XFCE, please wait...'
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop -P /usr/local/bin/
 wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/restart -P /usr/local/bin
 cd /usr/local/bin
 mv vncserver-start start
