@@ -17,3 +17,7 @@ Run Debian/Ubuntu without root on Android with Termux
 ### XFCE
 
       apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/xfce.sh && sh xfce.sh && rm xfce.sh
+
+### MATE
+
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/mate.sh && sh mate.sh && rm mate.sh
