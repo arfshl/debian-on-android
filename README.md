@@ -1,5 +1,5 @@
-# debianonandroid
-Run Debian/Ubuntu without root on Android with Termux
+# debian-on-android
+Script to install Debian/Ubuntu on Termux
 ## You Need
 - [Termux](https://f-droid.org/packages/com.termux)
 - [VNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
