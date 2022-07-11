@@ -3,7 +3,7 @@
 echo 'Installing LXDE, please wait...'
 apt-get install lxde-core lxterminal tigervnc-standalone-server -y
 apt-get clean
-echo 'Setting up LXQt, please wait...'
+echo 'Setting up LXDE, please wait...'
 mkdir ~/.vnc
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-start -P /usr/local/bin/
