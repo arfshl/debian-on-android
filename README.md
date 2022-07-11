@@ -6,30 +6,30 @@ Script to install Debian/Ubuntu on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/ubuntu -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
+      apt update && pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/ubuntu -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
 
 - Install Debian
 
-      pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/debian -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
+      apt update && pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/debian -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
 
 ## Install Desktop Environment
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
-### XFCE
+- XFCE
 
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/xfce.sh && sh xfce.sh && rm xfce.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/xfce.sh && sh xfce.sh && rm xfce.sh
 
-### MATE
+- MATE
 
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/mate.sh && sh mate.sh && rm mate.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/mate.sh && sh mate.sh && rm mate.sh
 
-### LXQt
+- LXQt
 
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
 
-### LXDE
+- LXDE
 
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
 
-### KDE 
+- KDE 
 
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
