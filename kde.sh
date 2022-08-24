@@ -25,8 +25,8 @@ cd
 chmod +x ~/.vnc/xstartup
 echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
-apt remove konqueror discover
-apt autoremove
+apt remove konqueror plasama-discover partitionmanager kdeconnect termit kwalletmanager -y
+apt autoremove -y
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
