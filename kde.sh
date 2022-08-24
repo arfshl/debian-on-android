@@ -14,7 +14,7 @@ mkdir ~/.vnc
 wget https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Heavy/KDE/Ubuntu/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/startkde -P /usr/local/bin/
 wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/stopkde -P /usr/local/bin/
-wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
+wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart -P /usr/local/bin/
 cd /usr/local/bin
 mv startkde start
 mv stopkde stop
@@ -25,6 +25,8 @@ cd
 chmod +x ~/.vnc/xstartup
 echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
+apt remove konqueror discover
+apt autoremove
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
