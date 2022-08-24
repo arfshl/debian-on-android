@@ -14,7 +14,7 @@ mkdir ~/.vnc
 wget https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Heavy/KDE/Ubuntu/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/startkde -P /usr/local/bin/
 wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/stopkde -P /usr/local/bin/
-https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
+wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
 cd /usr/local/bin
 mv startkde start
 mv stopkde stop
