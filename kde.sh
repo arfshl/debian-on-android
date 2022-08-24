@@ -27,6 +27,7 @@ echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 apt remove konqueror plasama-discover partitionmanager kdeconnect termit kwalletmanager -y
 apt autoremove -y
+passwd
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
