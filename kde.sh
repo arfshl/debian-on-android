@@ -28,7 +28,7 @@ source /etc/profile
 apt remove konqueror ksysguard plasma-discover partitionmanager kdeconnect termit kwalletmanager -y
 apt autoremove -y
 passwd
-echo 'Setting up Pulseaudio
+echo 'Setting up Pulseaudio'
 export PULSE_SERVER=127.0.0.1 && pulseaudio --start --disable-shm=1 --exit-idle-time=-1
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
