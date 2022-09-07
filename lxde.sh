@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT/LXDE/lxde_de.sh (Licensed under MIT)
 echo 'Installing LXDE, please wait...'
-apt-get install lxde-core lxterminal tigervnc-standalone-server -y
+apt-get install lxde-core lxterminal dbus-x11 tigervnc-standalone-server pulseaudio -y
 apt-get clean
 echo 'Setting up LXDE, please wait...'
 mkdir ~/.vnc
