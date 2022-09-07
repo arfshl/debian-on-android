@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Heavy/KDE/Ubuntu/de-ubuntu-kde.sh (Licensed under GPL-2.0)
 echo 'Installing KDE, please wait...'
 apt-get install xorg kde-plasma-desktop tigervnc-standalone-server dbus-x11 -y
@@ -28,6 +28,8 @@ source /etc/profile
 apt remove konqueror ksysguard plasma-discover partitionmanager kdeconnect termit kwalletmanager -y
 apt autoremove -y
 passwd
+echo 'Setting up Pulseaudio
+export PULSE_SERVER=127.0.0.1 && pulseaudio --start --disable-shm=1 --exit-idle-time=-1
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
