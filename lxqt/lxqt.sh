@@ -5,7 +5,7 @@ apt-get install lxqt-core lxqt-config dbus-x11 qterminal tigervnc-standalone-ser
 apt-get clean
 echo 'Setting up LXQt, please wait...'
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/vncserver-start -P /usr/local/bin/
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/vncserver-stop -P /usr/local/bin/
 wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/restart -P /usr/local/bin
