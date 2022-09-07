@@ -6,13 +6,23 @@ Script to install Debian/Ubuntu on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      apt update && pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntu -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
+      pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntu -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
 
 - Install Debian
 
-      apt update && pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/debian -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
+      pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/debian -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
 
 ## Install Desktop Environment
+### Set up Pulseaudio
+- Ubuntu
+
+      pkg install pulseaudio -y && rm /data/data/com.termux/files/usr/bin/ubuntu && wget -O ubuntu https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntuaudio -P /data/data/com.termux/files/usr/bin/ && chmod +x /data/data/com.termux/files/usr/bin/ubuntu
+
+- Debian
+
+      pkg install pulseaudio -y && rm /data/data/com.termux/files/usr/bin/debian && wget -O ubuntu https://raw.githubusercontent.com/arfshl/debian-on-android/main/debianaudio -P /data/data/com.termux/files/usr/bin/ && chmod +x /data/data/com.termux/files/usr/bin/debian
+
+### Install Desktop Environment
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 - XFCE
 
