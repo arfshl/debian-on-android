@@ -21,6 +21,8 @@ echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 apt remove xterm -y
 apt autoremove -y
+echo 'Setting up Pulseaudio
+export PULSE_SERVER=127.0.0.1 && pulseaudio --start --disable-shm=1 --exit-idle-time=-1
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
