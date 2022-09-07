@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Heavy/KDE/Ubuntu/de-ubuntu-kde.sh (Licensed under GPL-2.0)
 echo 'Installing KDE, please wait...'
-apt-get install xorg kde-plasma-desktop tigervnc-standalone-server dbus-x11 -y
+apt-get install xorg kde-plasma-desktop tigervnc-standalone-server dbus-x11 pulseaudio -y
 echo "Proccesing command provided by @maalos, this fixed error in Ubuntu 20 Focal."
 rm /var/lib/dpkg/info/fprintd.postinst
 rm /var/lib/dpkg/info/libfprint*.postinst
