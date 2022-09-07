@@ -38,3 +38,15 @@ Script to install Debian/Ubuntu on Termux
 - KDE 
 
       apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
+
+## Start PRoot when open Termux immediately
+- Ubuntu
+
+      echo 'ubuntu' >> $PREFIX/etc/bash.bashrc
+
+- Debian
+
+      echo 'debian' >> $PREFIX/etc/bash.bashrc
+
+
+
