@@ -14,13 +14,8 @@ Script to install Debian/Ubuntu on Termux
 
 ## Install Desktop Environment
 ### Set up Pulseaudio
-- Ubuntu
 
-      pkg install pulseaudio -y && rm /data/data/com.termux/files/usr/bin/ubuntu && wget -O ubuntu https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntuaudio -P /data/data/com.termux/files/usr/bin/ && chmod +x /data/data/com.termux/files/usr/bin/ubuntu
-
-- Debian
-
-      pkg install pulseaudio -y && rm /data/data/com.termux/files/usr/bin/debian && wget -O ubuntu https://raw.githubusercontent.com/arfshl/debian-on-android/main/debianaudio -P /data/data/com.termux/files/usr/bin/ && chmod +x /data/data/com.termux/files/usr/bin/debian
+      pkg install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
 
 ### Install Desktop Environment
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
