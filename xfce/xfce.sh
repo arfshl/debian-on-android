@@ -1,3 +1,3 @@
 #!/bin/sh
 xrdb $HOME/.Xresources
-dbus-launc startxfce4
+dbus-launch startxfce4
