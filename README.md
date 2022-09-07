@@ -21,23 +21,23 @@ Script to install Debian/Ubuntu on Termux
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 - XFCE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce.sh && sh xfce.sh && rm xfce.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xfce.sh && sh xfce.sh && rm xfce.sh
 
 - MATE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate.sh && sh mate.sh && rm mate.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate/mate.sh && sh mate.sh && rm mate.sh
 
 - LXQt
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt/lxqt.sh && sh lxqt.sh && rm lxqt.sh
 
 - LXDE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/lxde.sh && sh lxde.sh && rm lxde.sh
 
 - KDE 
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
+      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/kde.sh && sh kde.sh && rm kde.sh
 
 ## Start PRoot when open Termux immediately
 - Ubuntu
