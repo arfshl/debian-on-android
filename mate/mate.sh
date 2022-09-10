@@ -5,10 +5,10 @@ apt-get install mate-desktop-environment-core tigervnc-standalone-server dbus-x1
 apt-get clean
 echo 'Setting up MATE, please wait...'
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT/MATE/vncserver-stop -P /usr/local/bin/
-wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/restart -P /usr/local/bin
+curl -o ~/.vnc/xstartup https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate/xstartup
+curl -o /usr/local/bin/vncserver-start https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start 
+curl -o /usr/local/bin/vncserver-stop https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT/MATE/vncserver-stop 
+curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
 cd /usr/local/bin
 mv vncserver-start start
 mv vncserver-stop stop
