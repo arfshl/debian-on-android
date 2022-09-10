@@ -5,10 +5,10 @@ apt-get install lxde-core lxterminal dbus-x11 tigervnc-standalone-server pulseau
 apt-get clean
 echo 'Setting up LXDE, please wait...'
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-stop -P /usr/local/bin/
-wget https://raw.githubusercontent.com/arfshl/debianonandroid/main/restart -P /usr/local/bin
+curl -o ~/.vnc/xstartup https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/xstartup
+curl -o /usr/local/bin/vncserver-start https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-start
+curl -o /usr/local/bin/vncserver-stop https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-stop
+curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debianonandroid/main/restart
 cd /usr/local/bin
 mv vncserver-start start
 mv vncserver-stop stop
