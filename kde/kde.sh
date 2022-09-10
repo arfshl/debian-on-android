@@ -11,10 +11,10 @@ echo 'Done'
 apt-get clean
 echo 'Setting up KDE, please wait...'
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Heavy/KDE/Ubuntu/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/startkde -P /usr/local/bin/
-wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/stopkde -P /usr/local/bin/
-wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart -P /usr/local/bin/
+curl -o ~/.vnc/xstartup https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Scripts/DesktopEnvironment/Heavy/KDE/Ubuntu/xstartup
+curl -o /usr/local/bin/startkde https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/startkde
+curl -o /usr/local/bin/stopkde https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/stopkde
+curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
 cd /usr/local/bin
 mv startkde start
 mv stopkde stop
