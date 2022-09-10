@@ -6,11 +6,11 @@ Script to install Debian/Ubuntu on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntu -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
+      pkg update && pkg install proot-distro -y && curl -o /data/data/com.termux/files/usr/bin/ubuntu https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntu && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
 
 - Install Debian
 
-      pkg update && pkg install proot-distro wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/debian -P /data/data/com.termux/files/usr/bin && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
+      pkg update && pkg install proot-distro -y && curl -o /data/data/com.termux/files/usr/bin/debian https://raw.githubusercontent.com/arfshl/debian-on-android/main/debian && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
 
 ## Install Desktop Environment
 ### Set up Pulseaudio
@@ -21,23 +21,23 @@ Script to install Debian/Ubuntu on Termux
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 - XFCE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xfce.sh && sh xfce.sh && rm xfce.sh
+      apt update && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xfce.sh && sh xfce.sh && rm xfce.sh
 
 - MATE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate/mate.sh && sh mate.sh && rm mate.sh
+      apt update && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate/mate.sh && sh mate.sh && rm mate.sh
 
 - LXQt
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt/lxqt.sh && sh lxqt.sh && rm lxqt.sh
+      apt update && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt/lxqt.sh && sh lxqt.sh && rm lxqt.sh
 
 - LXDE
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/lxde.sh && sh lxde.sh && rm lxde.sh
+      apt update && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/lxde.sh && sh lxde.sh && rm lxde.sh
 
 - KDE 
 
-      apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/kde.sh && sh kde.sh && rm kde.sh
+      apt update && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/kde.sh && sh kde.sh && rm kde.sh
 
 ## Start PRoot when open Termux immediately
 - Ubuntu
