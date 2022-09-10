@@ -8,7 +8,7 @@ mkdir ~/.vnc
 curl -o ~/.vnc/xstartup https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xstartup 
 curl -o /usr/local/bin/vncserver-start https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start
 curl -o /usr/local/bin/vncserver-stop https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop 
-curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debianonandroid/main/restart
+curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
 cd /usr/local/bin
 mv vncserver-start start
 mv vncserver-stop stop
