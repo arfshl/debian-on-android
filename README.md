@@ -1,5 +1,5 @@
 # debian-on-android
-Script to install Debian/Ubuntu on Termux
+Script to install Ubuntu/Debian on Termux
 ## You Need
 - [Termux](https://f-droid.org/packages/com.termux)
 - [VNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android) (If you want to install desktop)
