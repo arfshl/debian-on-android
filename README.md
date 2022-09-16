@@ -19,6 +19,10 @@ Script to install Ubuntu/Debian on Termux
 
 ### Install Desktop Environment
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
+- KDE 
+
+      apt update && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/kde.sh && sh kde.sh && rm kde.sh
+
 - XFCE
 
       apt update && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xfce.sh && sh xfce.sh && rm xfce.sh
@@ -34,10 +38,6 @@ Script to install Ubuntu/Debian on Termux
 - LXDE
 
       apt update && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/lxde.sh && sh lxde.sh && rm lxde.sh
-
-- KDE 
-
-      apt update && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/kde.sh && sh kde.sh && rm kde.sh
 
 ## Start PRoot when open Termux immediately
 - Ubuntu
