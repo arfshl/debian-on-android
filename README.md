@@ -42,11 +42,11 @@ Script to install Ubuntu/Debian on Termux
 ## Start PRoot when open Termux immediately
 - Ubuntu
 
-      echo 'ubuntu' >> $PREFIX/etc/bash.bashrc
+      echo 'proot-distro login ubuntu' >> $PREFIX/etc/bash.bashrc
 
 - Debian
 
-      echo 'debian' >> $PREFIX/etc/bash.bashrc
+      echo 'proot-distro login debian' >> $PREFIX/etc/bash.bashrc
 
 
 
