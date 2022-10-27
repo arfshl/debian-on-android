@@ -32,8 +32,6 @@ stop
 start' >> /usr/local/bin/restart
 
 cd /usr/local/bin
-mv vncserver-start start
-mv vncserver-stop stop
 chmod +x start
 chmod +x stop
 chmod +x restart
