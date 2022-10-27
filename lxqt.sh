@@ -5,13 +5,33 @@ apt-get install lxqt-core lxqt-config dbus-x11 qterminal tigervnc-standalone-ser
 apt-get clean
 echo 'Setting up LXQt, please wait...'
 mkdir ~/.vnc
-curl -o ~/.vnc/xstartup https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt/xstartup
-curl -o /usr/local/bin/vncserver-start https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/vncserver-start  
-curl -o /usr/local/bin/vncserver-stop https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/vncserver-stop
-curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
+
+echo '#!/bin/sh
+xrdb $HOME/.Xresources
+startlxqt' >> ~/.vnc/xstartup
+
+echo '#!/usr/bin/env bash
+
+export USER=root
+export HOME=/root
+
+vncserver -name remote-desktop -localhost no :1' >> /usr/local/bin/start
+
+#!/usr/bin/env bash
+
+export USER=root
+export HOME=/root
+
+vncserver -kill :1
+rm -rf /root/.vnc/localhost:1.pid
+rm -rf /tmp/.X1-lock
+rm -rf /tmp/.X11-unix/X1' >> /usr/local/bin/stop
+
+echo '#!/bin/sh
+stop
+start' >> /usr/local/bin/restart
+
 cd /usr/local/bin
-mv vncserver-start start
-mv vncserver-stop stop
 chmod +x start
 chmod +x stop
 chmod +x restart
@@ -21,7 +41,7 @@ echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 apt remove xterm -y
 apt autoremove -y
-echo 'Setting up Pulseaudio'
+echo 'Setting up Pulseaudio...'
 echo 'export PULSE_SERVER=127.0.0.1' >> ~/.bashrc
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
