@@ -21,23 +21,23 @@ Script to install Ubuntu/Debian on Termux
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 - KDE 
 
-      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde/kde.sh && sh kde.sh && rm kde.sh
+      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
 
 - XFCE
 
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xfce.sh && sh xfce.sh && rm xfce.sh
+      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce.sh && sh xfce.sh && rm xfce.sh
 
 - MATE
 
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate/mate.sh && sh mate.sh && rm mate.sh
+      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate.sh && sh mate.sh && rm mate.sh
 
 - LXQt
 
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt/lxqt.sh && sh lxqt.sh && rm lxqt.sh
+      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
 
 - LXDE
 
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde/lxde.sh && sh lxde.sh && rm lxde.sh
+      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
 
 ## Start PRoot when open Termux immediately
 - Ubuntu
