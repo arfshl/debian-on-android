@@ -31,6 +31,7 @@ echo '#!/bin/sh
 stop
 start' >> /usr/local/bin/restart
 
+cd /usr/local/bin
 chmod +x start
 chmod +x stop
 chmod +x restart
