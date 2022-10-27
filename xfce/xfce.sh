@@ -5,13 +5,32 @@ apt-get install xfce4 xfce4-terminal tigervnc-standalone-server dbus-x11 pulseau
 apt-get clean
 echo 'Setting up XFCE, please wait...'
 mkdir ~/.vnc
-curl -o ~/.vnc/xstartup https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce/xstartup 
-curl -o /usr/local/bin/vncserver-start https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start
-curl -o /usr/local/bin/vncserver-stop https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop 
-curl -o /usr/local/bin/restart https://raw.githubusercontent.com/arfshl/debian-on-android/main/restart
-cd /usr/local/bin
-mv vncserver-start start
-mv vncserver-stop stop
+
+echo '#!/bin/sh
+xrdb $HOME/.Xresources
+startxfce4' >> ~/.vnc/xstartup
+
+echo '#!/usr/bin/env bash
+
+export USER=root
+export HOME=/root
+
+vncserver -name remote-desktop -localhost no :1' >> /usr/local/bin/start 
+
+echo '#!/usr/bin/env bash
+
+export USER=root
+export HOME=/root
+
+vncserver -kill :1
+rm -rf /root/.vnc/localhost:1.pid
+rm -rf /tmp/.X1-lock
+rm -rf /tmp/.X11-unix/X1' >> /usr/local/bin/stop
+
+echo '#!/bin/sh
+stop
+start' >> /usr/local/bin/restart
+
 chmod +x start
 chmod +x stop
 chmod +x restart
