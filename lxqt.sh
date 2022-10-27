@@ -17,7 +17,7 @@ export HOME=/root
 
 vncserver -name remote-desktop -localhost no :1' >> /usr/local/bin/start
 
-#!/usr/bin/env bash
+echo '#!/usr/bin/env bash
 
 export USER=root
 export HOME=/root
