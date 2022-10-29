@@ -25,7 +25,8 @@ echo '#!/usr/bin/env bash
 export USER=root
 export HOME=/root
 
-vncserver -name remote-desktop -localhost no :1' >> /usr/local/bin/start
+vncserver -name remote-desktop -localhost no :1
+echo 'VNC server address: 127.0.0.1:1'' >> /usr/local/bin/start
 
 echo '#!/bin/sh
 stop
