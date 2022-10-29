@@ -17,7 +17,7 @@ Script to install Ubuntu/Debian on Termux
 
       pkg install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
 
-### Install Desktop Environment
+### Desktop Environment
 **NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
 - KDE 
 
@@ -38,6 +38,19 @@ Script to install Ubuntu/Debian on Termux
 - LXDE
 
       apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
+
+### Window Manager
+- i3
+
+      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/i3.sh && sh i3.sh && rm i3.sh
+
+- Openbox 
+
+      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/openbox.sh && sh openbox.sh && rm openbox.sh
+
+- Awesome
+
+      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
 
 ## Start PRoot when open Termux immediately
 - Ubuntu
