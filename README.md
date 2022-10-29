@@ -12,7 +12,7 @@ Script to install Ubuntu/Debian on Termux
 
       pkg update && pkg install proot-distro -y && curl -o /data/data/com.termux/files/usr/bin/debian https://raw.githubusercontent.com/arfshl/debian-on-android/main/debian && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
 
-## Install Desktop Environment
+## Install Graphical Environment
 ### Set up Pulseaudio
 
       pkg install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
@@ -47,6 +47,7 @@ Script to install Ubuntu/Debian on Termux
 - Debian
 
       echo 'proot-distro login debian' >> $PREFIX/etc/bash.bashrc
+
 
 
 
