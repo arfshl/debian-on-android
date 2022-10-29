@@ -37,7 +37,8 @@ case `uname -m` in
 		echo "unknown architecture"; exit 1 ;;
 	esac
 
-LD_PRELOAD=/lib/${archurl}-linux-gnu/libgcc_s.so.1 vncserver -name remote-desktop -localhost no :1' >> /usr/local/bin/start
+LD_PRELOAD=/lib/${archurl}-linux-gnu/libgcc_s.so.1 vncserver -name remote-desktop -localhost no :1
+echo 'VNC server address: 127.0.0.1:1'' >> /usr/local/bin/start
 
 echo '#!/bin/sh
 export USER=root
@@ -69,4 +70,3 @@ echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
 echo 'To restart VNC server use restart command'
 start
-echo 'VNC server address: 127.0.0.1:1'
