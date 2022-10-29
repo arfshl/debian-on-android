@@ -6,11 +6,11 @@ Script to install Ubuntu/Debian on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      pkg update && pkg install proot-distro -y && proot-distro install ubuntu && proot-distro login ubuntu
+      pkg update && pkg install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command' && proot-distro login ubuntu
 
 - Install Debian
 
-      pkg update && pkg install proot-distro -y && proot-distro install debian && proot-distro login debian
+      pkg update && pkg install proot-distro -y && proot-distro install debian && clear && echo 'To start Ubuntu use proot-distro login debian command' && proot-distro login debian
 
 ## Install Graphical Environment
 ### Set up Pulseaudio
