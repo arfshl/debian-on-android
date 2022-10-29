@@ -6,11 +6,11 @@ Script to install Ubuntu/Debian on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      pkg update && pkg install proot-distro -y && curl -o /data/data/com.termux/files/usr/bin/ubuntu https://raw.githubusercontent.com/arfshl/debian-on-android/main/ubuntu && chmod +x /data/data/com.termux/files/usr/bin/ubuntu && proot-distro install ubuntu && ubuntu
+      pkg update && pkg install proot-distro -y && proot-distro install ubuntu && proot-distro login ubuntu
 
 - Install Debian
 
-      pkg update && pkg install proot-distro -y && curl -o /data/data/com.termux/files/usr/bin/debian https://raw.githubusercontent.com/arfshl/debian-on-android/main/debian && chmod +x /data/data/com.termux/files/usr/bin/debian && proot-distro install debian && debian
+      pkg update && pkg install proot-distro -y && proot-distro install debian && proot-distro login debian
 
 ## Install Graphical Environment
 ### Set up Pulseaudio
