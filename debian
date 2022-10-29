@@ -1,4 +1,0 @@
-#!/bin/sh
-clear
-echo 'To start Debian use debian command'
-proot-distro login debian
