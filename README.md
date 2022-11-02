@@ -42,7 +42,7 @@ Script to install Ubuntu/Debian on Termux
 ### Desktop Environment
 - KDE 
 
-      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
 
 - XFCE
 
@@ -63,13 +63,13 @@ Script to install Ubuntu/Debian on Termux
 ### Window Manager
 - i3
 
-      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/i3.sh && sh i3.sh && rm i3.sh
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/i3.sh && sh i3.sh && rm i3.sh
 
 - Openbox 
 
-      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/openbox.sh && sh openbox.sh && rm openbox.sh
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/openbox.sh && sh openbox.sh && rm openbox.sh
 
 - Awesome
 
-      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
 
