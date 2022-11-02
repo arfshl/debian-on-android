@@ -1,4 +1,0 @@
-#!/bin/sh
-clear
-echo 'To start Ubuntu use ubuntu command'
-proot-distro login ubuntu
