@@ -8,7 +8,8 @@ mkdir ~/.vnc
 
 echo '#!/bin/sh
 xrdb $HOME/.Xresources
-startlxqt' >> ~/.vnc/xstartup
+startlxqt
+export PULSE_SERVER=127.0.0.1' >> ~/.vnc/xstartup
 
 echo '#!/usr/bin/env bash
 
@@ -42,8 +43,6 @@ echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 apt remove xterm -y
 apt autoremove -y
-echo 'Setting up Pulseaudio...'
-echo 'export PULSE_SERVER=127.0.0.1' >> ~/.bashrc
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
