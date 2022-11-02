@@ -6,11 +6,11 @@ Script to install Ubuntu/Debian on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      pkg update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command'
+      apt update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command'
 
 - Install Debian
 
-      pkg update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install debian && clear && echo 'To start Debian use proot-distro login debian command'
+      apt update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install debian && clear && echo 'To start Debian use proot-distro login debian command'
 
 ### PRoot Login command
 - Ubuntu
@@ -37,7 +37,7 @@ Script to install Ubuntu/Debian on Termux
 ## Install Graphical Environment
 ### Set up Pulseaudio
 
-      pkg install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
+      apt install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
 
 ### Desktop Environment
 - KDE 
