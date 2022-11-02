@@ -14,7 +14,8 @@ mkdir ~/.vnc
 
 echo '#!/bin/bash
 xrdb $HOME/.Xresources
-dbus-launch startplasma-x11' >> ~/.vnc/xstartup
+dbus-launch startplasma-x11
+export PULSE_SERVER=127.0.0.1' >> ~/.vnc/xstartup
 
 echo '#!/bin/sh
 export USER=root
@@ -63,8 +64,6 @@ source /etc/profile
 apt remove konqueror ksysguard plasma-discover partitionmanager kdeconnect termit kwalletmanager -y
 apt autoremove -y
 passwd
-echo 'Setting up Pulseaudio...'
-echo 'export PULSE_SERVER=127.0.0.1' >> ~/.bashrc
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
