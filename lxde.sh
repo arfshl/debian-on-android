@@ -48,4 +48,3 @@ echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
 echo 'To restart VNC server use restart command'
 start
-echo 'VNC server address: 127.0.0.1:1'
