@@ -21,7 +21,7 @@ Script to install Ubuntu/Debian on Termux
 
       proot-distro login debian
 
-#### [OPTIONAL] PRoot Auto-Login
+### [OPTIONAL] PRoot Auto-Login
 - Ubuntu
 
       echo 'proot-distro login ubuntu' >> $PREFIX/etc/bash.bashrc
