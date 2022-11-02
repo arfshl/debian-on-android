@@ -9,7 +9,6 @@ rm /var/lib/dpkg/info/libfprint*.postinst
 rm /var/lib/dpkg/info/libpam-fprintd*.postinst
 dpkg --configure -a
 echo 'Done'
-apt-get clean
 echo 'Setting up KDE, please wait...'
 mkdir ~/.vnc
 
