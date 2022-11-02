@@ -6,53 +6,22 @@ Script to install Ubuntu/Debian on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      pkg update && pkg install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command' && proot-distro login ubuntu
+      pkg update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command'
 
 - Install Debian
 
-      pkg update && pkg install proot-distro -y && proot-distro install debian && clear && echo 'To start Debian use proot-distro login debian command' && proot-distro login debian
+      pkg update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install debian && clear && echo 'To start Debian use proot-distro login debian command'
 
-## Install Graphical Environment
-### Set up Pulseaudio
+### PRoot Login command
+- Ubuntu
 
-      pkg install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
+      proot-distro login ubuntu
 
-### Desktop Environment
-**NOTE:Execute these command in PRoot shell (Shell you get after start Debian/Ubuntu), not Termux shell**
-- KDE 
+- Debian
 
-      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
+      proot-distro login debian
 
-- XFCE
-
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce.sh && sh xfce.sh && rm xfce.sh
-
-- MATE
-
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate.sh && sh mate.sh && rm mate.sh
-
-- LXQt
-
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
-
-- LXDE
-
-      apt update && apt upgrade && apt install curl -y && curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
-
-### Window Manager
-- i3
-
-      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/i3.sh && sh i3.sh && rm i3.sh
-
-- Openbox 
-
-      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/openbox.sh && sh openbox.sh && rm openbox.sh
-
-- Awesome
-
-      apt update && apt upgrade && apt install curl -y && curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
-
-## Start PRoot when open Termux immediately
+#### [OPTIONAL] PRoot Auto-Login
 - Ubuntu
 
       echo 'proot-distro login ubuntu' >> $PREFIX/etc/bash.bashrc
@@ -61,6 +30,46 @@ Script to install Ubuntu/Debian on Termux
 
       echo 'proot-distro login debian' >> $PREFIX/etc/bash.bashrc
 
+### Repository setup, update package, and set timezone
 
+      apt update && apt dist-upgrade && dpkg-reconfigure tzdata
 
+## Install Graphical Environment
+### Set up Pulseaudio
+
+      pkg install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
+
+### Desktop Environment
+- KDE 
+
+      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/kde.sh && sh kde.sh && rm kde.sh
+
+- XFCE
+
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/xfce.sh && sh xfce.sh && rm xfce.sh
+
+- MATE
+
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/mate.sh && sh mate.sh && rm mate.sh
+
+- LXQt
+
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxqt.sh && sh lxqt.sh && rm lxqt.sh
+
+- LXDE
+
+      curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/lxde.sh && sh lxde.sh && rm lxde.sh
+
+### Window Manager
+- i3
+
+      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/i3.sh && sh i3.sh && rm i3.sh
+
+- Openbox 
+
+      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/openbox.sh && sh openbox.sh && rm openbox.sh
+
+- Awesome
+
+      curl -o https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
 
