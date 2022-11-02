@@ -5,12 +5,12 @@ apt install keyboard-configuration tzdata dialog libexo-2-0 openbox obconf tiger
 echo 'Setting up Openbox...'
 mkdir -p ~/.vnc
 
-
 echo "#!/bin/bash
 [ -r ~/.Xresources ] && xrdb ~/.Xresources
 XAUTHORITY=~/.Xauthority
 export XAUTHORITY
 dbus-launch openbox
+export PULSE_SERVER=127.0.0.1
 dbus-launch cairo-dock" > ~/.vnc/xstartup
 
 echo '#!/usr/bin/env bash
@@ -45,8 +45,6 @@ echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 apt remove xterm -y
 apt autoremove -y
-echo 'Setting up Pulseaudio...'
-echo 'export PULSE_SERVER=127.0.0.1' >> ~/.bashrc
 echo 'Starting up VNC Server'
 echo 'To start VNC server use start command'
 echo 'To stop VNC server use stop command'
