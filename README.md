@@ -32,12 +32,12 @@ Script to install Ubuntu/Debian on Termux
 
 ### Repository setup, update package, and set timezone
 
-      apt update && apt dist-upgrade && dpkg-reconfigure tzdata
+    apt update && apt dist-upgrade && dpkg-reconfigure tzdata
 
 ## Install Graphical Environment
 ### Set up Pulseaudio
 
-      apt install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
+    apt install pulseaudio -y && echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
 
 ### Desktop Environment
 - KDE 
