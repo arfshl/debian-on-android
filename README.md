@@ -6,11 +6,11 @@ Script to install Ubuntu/Debian on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      apt update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command'
+      apt update && apt dist-upgrade && apt install proot-distro -y && proot-distro install ubuntu && clear && echo 'To start Ubuntu use proot-distro login ubuntu command'
 
 - Install Debian
 
-      apt update && apt dist-upgrade && pkg install proot-distro -y && proot-distro install debian && clear && echo 'To start Debian use proot-distro login debian command'
+      apt update && apt dist-upgrade && apt install proot-distro -y && proot-distro install debian && clear && echo 'To start Debian use proot-distro login debian command'
 
 ### PRoot Login command
 - Ubuntu
