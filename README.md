@@ -82,13 +82,9 @@ Script to install Ubuntu/Debian on Termux
 - Repository Pinning
 
 echo '
-
 Package: *
-
 Pin: origin packages.mozilla.org
-
 Pin-Priority: 1000
-
 ' | tee /etc/apt/preferences.d/mozilla 
 
 - Install Firefox Nightly
