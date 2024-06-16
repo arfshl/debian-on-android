@@ -6,7 +6,7 @@ Script to install Ubuntu/Debian on Termux
 ## Install Ubuntu/Debian
 - Install Ubuntu
 
-      apt update && apt dist-upgrade -y && apt install proot-distro -y && proot-distro install ubuntu
+      apt install x11-repo termux-x11-nightly tur-repo && apt update && apt dist-upgrade -y && apt install proot-distro -y && proot-distro install ubuntu
 
 - Install Debian
 
@@ -73,3 +73,16 @@ Script to install Ubuntu/Debian on Termux
 
       curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
 
+## Install Mozilla Firefox (Official Repository - Firefox Nightly ARM64 Binary)
+
+- Add Repository
+
+      wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null && echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null && echo '
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+' | tee /etc/apt/preferences.d/mozilla
+
+- Install Firefox Nightly
+
+      apt update && sudo apt install firefox-nightly
