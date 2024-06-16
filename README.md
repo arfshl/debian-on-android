@@ -81,7 +81,7 @@ Script to install Ubuntu/Debian on Termux
 
 - Repository Pinning
 
-      echo '
+echo '
 Package: *
 Pin: origin packages.mozilla.org
 Pin-Priority: 1000
