@@ -36,7 +36,7 @@ Script to install Ubuntu/Debian on Termux
 
 ## Install Graphical Environment
 
-### Fix for 'Dummy Output on OneUI'
+### Fix for 'Dummy Output' on OneUI
      echo 'LD_PRELOAD=/system/lib64/libskcodec.so' >> $PREFIX/etc/bash.bashrc
 
 ### Set up Pulseaudio (Execute in Termux shell)
