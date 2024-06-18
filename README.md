@@ -30,6 +30,14 @@ Script to install Ubuntu/Debian on Termux
 
       echo 'proot-distro login debian' >> $PREFIX/etc/bash.bashrc
 
+### Add Additional User
+
+    apt install sudo && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL > /etc/sudoers.d/user
+
+### login with username
+
+      proot-distro login ubuntu --user [username]
+
 ### Repository setup, update package, and set timezone
 
     apt update && apt dist-upgrade && dpkg-reconfigure tzdata
