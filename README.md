@@ -32,11 +32,11 @@ Script to install Ubuntu/Debian on Termux
 
 ### Add Additional User
 
-    apt install sudo && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL > /etc/sudoers.d/user
+    apt install sudo && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL >> /etc/sudoers.d/user
 
 ### login with username
 
-      proot-distro login ubuntu --user [username]
+    proot-distro login ubuntu --user [username]
 
 ### Repository setup, update package, and set timezone
 
