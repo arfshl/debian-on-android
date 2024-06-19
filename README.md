@@ -85,7 +85,7 @@ Script to install Ubuntu/Debian on Termux
 
       curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
 
-#### Install Mozilla Firefox (Official Repository - Firefox Nightly ARM64 Binary)
+### Install Mozilla Firefox (Official Repository - Firefox Nightly ARM64 Binary)
 
 - Add Repository
 
