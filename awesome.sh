@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://github.com/AndronixApp/AndronixOrigin/raw/master/WM/APT/awesome.sh (Licensed under MIT)
 echo "Installing Awesome..."
-apt install sudo
+apt install sudo -y
 sudo apt install keyboard-configuration tzdata dialog awesome tigervnc-standalone-server nano dbus-x11 xorg xfce4-terminal thunar libexo-2-0 cairo-dock --no-install-recommends -y
 sudo apt-get clean
 echo "Setting up Awesome..."
