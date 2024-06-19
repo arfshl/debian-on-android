@@ -10,7 +10,7 @@ Script to install Ubuntu/Debian on Termux
 
 - Install Debian
 
-      apt update && apt dist-upgrade -y && apt install proot-distro -y && proot-distro install debian
+     apt install x11-repo termux-x11-nightly tur-repo && apt update && apt dist-upgrade -y && apt install proot-distro -y && proot-distro install debian
 
 ### PRoot Login command
 - Ubuntu
