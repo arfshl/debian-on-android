@@ -42,7 +42,7 @@ sudo chmod +x stop
 sudo chmod +x restart
 cd
 chmod +x ~/.vnc/xstartup
-echo "export DISPLAY=":1"" >> /etc/profile
+sudo echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 sudo apt remove xterm -y
 sudo apt autoremove -y
