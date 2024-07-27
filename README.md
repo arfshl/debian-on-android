@@ -103,7 +103,8 @@ Pin-Priority: 1000
 
       sudo apt update && sudo apt install firefox-nightly
 
+
 - Hold snapd Packages
 
-    sudo echo 'Package: snapd          Pin: release a=*
+sudo echo 'Package: snapd          Pin: release a=*
 Pin-Priority: -10' >> /etc/apt/preferences.d/nosnap.conf
