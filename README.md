@@ -107,4 +107,4 @@ Pin-Priority: 1000
 - Hold snapd Packages
 
 sudo echo 'Package: snapd          Pin: release a=*
-Pin-Priority: -10' >> /etc/apt/preferences.d/nosnap.conf
+Pin-Priority: -10' >> /etc/apt/preferences.d/nosnap.pref
