@@ -32,7 +32,7 @@ Script to install Ubuntu/Debian on Termux
 
 ### Add Additional User
 
-    apt install sudo && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
+    apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
 ### login with username
 
