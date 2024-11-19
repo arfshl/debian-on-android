@@ -30,14 +30,6 @@ Script to install Ubuntu/Debian on Termux
 
       echo 'proot-distro login debian' >> $PREFIX/etc/bash.bashrc
 
-### Add user other than root and set up sudo
-
-    apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
-
-### login with username
-
-    proot-distro login ubuntu --user [username]
-
 ### Repository setup, update package, and set timezone
 
     apt update && apt dist-upgrade && dpkg-reconfigure tzdata
@@ -84,6 +76,16 @@ Script to install Ubuntu/Debian on Termux
 - Awesome
 
       curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
+  
+
+### Add user other than root and set up sudo
+
+    apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
+
+### Login with username
+
+    proot-distro login ubuntu --user [username]
+
 
 ### Install Mozilla Firefox (Official Repository - Firefox Nightly ARM64 Binary)
 
