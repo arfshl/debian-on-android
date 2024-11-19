@@ -30,7 +30,7 @@ Script to install Ubuntu/Debian on Termux
 
       echo 'proot-distro login debian' >> $PREFIX/etc/bash.bashrc
 
-### Add Additional User
+### Add user other than root and set up sudo
 
     apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
