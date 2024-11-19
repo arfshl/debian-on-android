@@ -93,11 +93,11 @@ Script to install Ubuntu/Debian on Termux
 
 - Repository Pinning
 
-echo '
-Package: *
-Pin: origin packages.mozilla.org
-Pin-Priority: 1000
-' | sudo tee /etc/apt/preferences.d/mozilla 
+      echo '
+      Package: *
+      Pin: origin packages.mozilla.org
+      Pin-Priority: 1000
+      ' | sudo tee /etc/apt/preferences.d/mozilla 
 
 - Install Firefox Nightly
 
@@ -106,5 +106,6 @@ Pin-Priority: 1000
 
 - Hold snapd Packages
 
-sudo echo 'Package: snapd          Pin: release a=*
-Pin-Priority: -10' >> /etc/apt/preferences.d/nosnap.pref
+      sudo echo 'Package: snapd
+      Pin: release a=*
+      Pin-Priority: -10' >> /etc/apt/preferences.d/nosnap.pref
