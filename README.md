@@ -34,6 +34,14 @@ Script to install Ubuntu/Debian on Termux
 
     apt update && apt dist-upgrade && dpkg-reconfigure tzdata
 
+### Add user other than root and set up sudo
+
+    apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
+
+### Login with username
+
+    proot-distro login ubuntu --user [username]
+
 ## Install Graphical Environment
 
 ### Fix for 'Dummy Output' on OneUI
@@ -77,11 +85,3 @@ Script to install Ubuntu/Debian on Termux
 
       curl -O https://raw.githubusercontent.com/arfshl/debian-on-android/main/awesome.sh && sh awesome.sh && rm awesome.sh
   
-
-### Add user other than root and set up sudo
-
-    apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
-
-### Login with username
-
-    proot-distro login ubuntu --user [username]
