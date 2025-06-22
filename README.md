@@ -38,6 +38,8 @@ Script to install Ubuntu/Debian on Termux
 
     apt install sudo adduser && adduser [username] && echo '[username] ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
+**NOTE**: Change username and home directory on /usr/local/bin/start if you create new user with new username
+
 ### Login with username
 
     proot-distro login ubuntu --user [username]
