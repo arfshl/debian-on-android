@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://github.com/AndronixApp/AndronixOrigin/raw/master/WM/APT/i3.sh (Licensed under MIT)
 echo "Installing i3..."
-apt install sudo addusr -y
+apt install sudo adduser -y
 sudo apt install keyboard-configuration dialog libexo-2-0 i3 tigervnc-standalone-server nano dbus-x11 xorg xfce4-terminal thunar cairo-dock tigervnc-common pulseaudio --no-install-recommends -y
 sudo apt-get clean
 echo "Setting up i3..."
