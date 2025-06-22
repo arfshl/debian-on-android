@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT/LXQT/lxqt_de.sh (Licensed under MIT)
 echo 'Installing LXQt, please wait...'
-apt install adduser
+apt install adduser sudo
 apt-get install lxqt-core lxqt-config dbus-x11 qterminal tigervnc-standalone-server pulseaudio -y
 apt-get clean
 echo 'Setting up LXQt, please wait...'
