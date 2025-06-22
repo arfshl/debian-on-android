@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT/XFCE4/xfce4_de.sh (Licensed under MIT)
 echo 'Installing XFCE, please wait...'
-apt install sudo addusr
+apt install sudo adduser
 sudo apt install xfce4 xfce4-terminal tigervnc-standalone-server dbus-x11 pulseaudio -y
 sudo apt clean
 echo 'Setting up XFCE, please wait...'
