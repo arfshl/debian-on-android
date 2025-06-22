@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT/LXDE/lxde_de.sh (Licensed under MIT)
 echo 'Installing LXDE, please wait...'
-apt install sudo addusr -y
+apt install sudo adduser -y
 sudo apt-get install lxde-core lxterminal dbus-x11 tigervnc-standalone-server pulseaudio -y
 sudo apt-get clean
 echo 'Setting up LXDE, please wait...'
