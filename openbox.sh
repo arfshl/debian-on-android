@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is modification of https://github.com/AndronixApp/AndronixOrigin/raw/master/WM/APT/openbox.sh (Licensed under MIT)
 echo "Installing Openbox..."
-apt install sudo addusr
+apt install sudo adduser
 sudo apt install keyboard-configuration tzdata dialog libexo-2-0 openbox obconf tigervnc-standalone-server nano dbus-x11 xorg xfce4-terminal thunar cairo-dock pulseaudio --no-install-recommends -y
 apt-get clean
 echo 'Setting up Openbox...'
