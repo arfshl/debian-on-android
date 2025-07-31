@@ -1,3 +1,11 @@
 sudo sed -i 's|/usr/bin/vivaldi --incognito %U|/usr/bin/vivaldi --incognito --no-sandbox %U|' /usr/share/applications/vivaldi-stable.desktop
 sudo sed -i 's|/usr/bin/vivaldi %U|/usr/bin/vivaldi --no-sandbox %U|' /usr/share/applications/vivaldi-stable.desktop
 sudo sed -i 's|/usr/bin/vivaldi --new-window %U|/usr/bin/vivaldi --new-window --no-sandbox %U|' /usr/share/applications/vivaldi-stable.desktop
+
+
+      - name: Release it!
+        uses: softprops/action-gh-release@v2
+        with:
+          files: 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
