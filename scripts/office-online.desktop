@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft Office Online
+GenericName=Office
+Comment=Create a document online
+Exec=/usr/bin/chromium office.com --no-sandbox  %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=chromium
+Categories=Office;Presentation;Spreadsheet;WordProcessor
+MimeType=text/html;text/xml;application/xhtml_xml;application/x-mimearchive;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=chromium
+StartupNotify=true
+Keywords=office;word;excel;powerpoint
