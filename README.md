@@ -1,5 +1,5 @@
 # PRoot Distro Desktop
-Collection of script for easy desktop environment installation on PRoot Distro minimal rootfs
+Collection of script for easy desktop environment installation on PRoot Distro minimal rootfs, with preconfigured sound and partial 3D acceleration 
 
 
 
