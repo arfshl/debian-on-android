@@ -41,3 +41,13 @@ proot-distro install ubuntu --override-alias ubuntu-xfce
 
 # Setup ubuntu-xfce
 proot-distro login ubuntu-xfce -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/xfce/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
+
+echo 'To start command line session: startubuntu-xfce'
+echo 'To start X11 session: startubuntu-xfce-x11'
+echo 'To start VNC server: startvnc'
+echo 'To stop VNC server: stopvnc'
+echo 'To restart VNC server: restartvnc'
+echo 'Default user: ubuntu-xfce'
+echo 'Default password: 123'    
+echo 'VNC server address: 127.0.0.1:5900'
+echo 'Default VNC password: 1234567890'

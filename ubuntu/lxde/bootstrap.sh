@@ -15,7 +15,7 @@ apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-andr
 echo '#!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-proot-distro login ubuntu-lxde --user ubuntu-lxde' >> /data/data/com.termux/files/usr/bin/startubuntu-xfce
+proot-distro login ubuntu-lxde --user ubuntu-lxde' >> /data/data/com.termux/files/usr/bin/startubuntu-lxde
 
 # for X11 session
 cat <<EOF > /data/data/com.termux/files/usr/bin/startubuntu-lxde-x11
@@ -40,3 +40,13 @@ proot-distro install ubuntu --override-alias ubuntu-lxde
 
 # Setup ubuntu-lxde
 proot-distro login ubuntu-lxde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
+
+echo 'To start command line session: startubuntu-lxde'
+echo 'To start X11 session: startubuntu-lxde-x11'
+echo 'To start VNC server: startvnc'
+echo 'To stop VNC server: stopvnc'
+echo 'To restart VNC server: restartvnc'
+echo 'Default user: ubuntu-lxde'
+echo 'Default password: 123'    
+echo 'VNC server address: 127.0.0.1:5900'
+echo 'Default VNC password: 1234567890'

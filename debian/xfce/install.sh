@@ -1,70 +1,52 @@
 #!/bin/sh
-# Remove mozillateam beta repository
-apt-add-repository ppa:mozillateam/firefox-next -r -y
-apt-add-repository ppa:mozillateam/thunderbird-next -r -y
-
 # Add mozilla official repository 
 apt install sudo -y
 echo 'Adding Mozilla Repository...'
 wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 sudo echo 'deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main' >> /etc/apt/sources.list.d/mozilla.list
-echo 'Adding Mozillateam PPA...'
-sudo add-apt-repository ppa:mozillateam/ppa -y
 echo 'Configuring APT Pinning...'
 sudo echo 'Package: *
 Pin: origin packages.mozilla.org
-Pin-Priority: 1001
-
-Package: *
-Pin: release o=LP-PPA-mozillateam
-Pin-Priority: 1000
-
-Package: firefox
-Pin: release o=Ubuntu
-Pin-Priority: -1
-
-Package: thunderbird
-Pin: release o=Ubuntu
-Pin-Priority: -1' >> /etc/apt/preferences.d/mozilla
+Pin-Priority: 1001' >> /etc/apt/preferences.d/mozilla
 echo 'Done'
 
 # Update and upgrade system
 apt update && apt upgrade -y && apt autoremove -y
 
 # Install Desktop, VNC, and basic utility
-apt install xfce4 xfce4-terminal dbus-x11 pulseaudio nano wget curl sudo adduser xdg-user-dirs xdg-user-dirs-gtk xubuntu-wallpapers xfce4-whiskermenu-plugin xubuntu-icon-theme xubuntu-default-settings xubuntu-artwork tigervnc-standalone-server -y && apt clean
+apt install xfce4 xfce4-terminal dbus-x11 pulseaudio nano wget curl sudo adduser xdg-user-dirs xdg-user-dirs-gtk xfce4-whiskermenu-plugin tigervnc-standalone-server -y && apt clean
 
 # Adding user and password
-sudo adduser --disabled-password --gecos "ubuntu-xfce" ubuntu-xfce && echo 'ubuntu-xfce:123' | chpasswd && echo 'ubuntu-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
+sudo adduser --disabled-password --gecos "debian-xfce" debian-xfce && echo 'debian-xfce:123' | chpasswd && echo 'debian-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
 # Setup VNC server
 # Create VNC configuration directory
-mkdir -p /home/ubuntu-xfce/.vnc
+mkdir -p /home/debian-xfce/.vnc
 
 # Create VNC password file (default 1234567890)
-printf "1234567890" | vncpasswd -f > /home/ubuntu-xfce/.vnc/passwd
-chmod 600 /home/ubuntu-xfce/.vnc/passwd
+printf "1234567890" | vncpasswd -f > /home/debian-xfce/.vnc/passwd
+chmod 600 /home/debian-xfce/.vnc/passwd
 
 # Create VNC startup script
 echo '#!/bin/sh
 xrdb $HOME/.Xresources
 export PULSE_SERVER=127.0.0.1
 export DISPLAY=:0
-dbus-launch --exit-with-session startxfce4' >> /home/ubuntu-xfce/.vnc/xstartup
+dbus-launch --exit-with-session startxfce4' >> /home/debian-xfce/.vnc/xstartup
 
 # Create script for starting VNC server
 echo '#!/bin/sh
-export USER=ubuntu-xfce
-export HOME=/home/ubuntu-xfce
+export USER=debian-xfce
+export HOME=/home/debian-xfce
 vncserver -name remote-desktop -localhost no :0
 echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'' >> /usr/local/bin/startvnc
 
 # Create script for stopping VNC server
 echo '#!/bin/sh
-export USER=ubuntu-xfce
-export HOME=/home/ubuntu-xfce
+export USER=debian-xfce
+export HOME=/home/debian-xfce
 vncserver -kill :0
-rm -rf /home/ubuntu-xfce/.vnc/localhost:0.pid
+rm -rf /home/debian-xfce/.vnc/localhost:0.pid
 rm -rf /tmp/.X0-lock
 rm -rf /tmp/.X11-unix/X0>> /usr/local/bin/stopvnc
 
@@ -79,7 +61,7 @@ chmod +x startvnc
 chmod +x stopvnc
 chmod +x restartvnc
 cd
-chmod +x /home/ubuntu-xfce/.vnc/xstartup
+chmod +x /home/debian-xfce/.vnc/xstartup
 
 
 
