@@ -31,7 +31,7 @@
     wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxqt/bootstrap.sh && sh bootstrap.sh && rm bootstrap.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
-    sudo apt update && sudo apt install firefox vlc thunderbird lximage-qt kcalc lxqt-archiver okular libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad -y && apt clean
+    sudo apt update && sudo apt install firefox vlc thunderbird lximage-qt kcalc lxqt-archiver qpdfview libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad -y && apt clean
 
 #### Remove (rootfs only)
     wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxqt/remove-rootfs.sh && sh remove-rootfs.sh && rm remove-rootfs.sh
