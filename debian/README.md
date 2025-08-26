@@ -1,4 +1,4 @@
-# debian LTS 
+# Debian Stable 
 
 ## XFCE
 - proot-distro aliases: debian-xfce
