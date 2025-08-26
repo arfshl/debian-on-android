@@ -17,10 +17,11 @@ LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 proot-distro login ubuntu-kde --user ubuntu-kde' >> /data/data/com.termux/files/usr/bin/startubuntu-xfce
 
-
 # for X11 session
 cat <<EOF > /data/data/com.termux/files/usr/bin/startubuntu-kde-x11
 #!/bin/sh
+LD_PRELOAD=/system/lib64/libskcodec.so
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 export XDG_RUNTIME_DIR=${TMPDIR}
 kill -9 \$(pgrep -f "termux.x11")\ 2>/dev/null
 proot-distro login ubuntu-kde --shared-tmp -- /bin/sh -c 'kill -9 $(pgrep -f "x11") 2>/dev/null'
