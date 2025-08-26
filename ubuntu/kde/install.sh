@@ -32,7 +32,7 @@ echo 'Done'
 apt update && apt upgrade -y && apt autoremove -y
 
 # Install Desktop, VNC, and basic utility
-apt update && apt upgrade -y && apt install kde-plasma-desktop kubuntu-settings-desktop kubuntu-wallpapers libkubuntu1 dbus-x11 pulseaudio nano wget curl sudo adduser pavucontrol-qt tigervnc-standalone-server -y && apt clean
+apt update && apt upgrade -y && apt install kde-plasma-desktop kubuntu-settings-desktop kubuntu-wallpapers libkubuntu1 dbus-x11 pulseaudio nano wget curl sudo adduser pavucontrol-qt tigervnc-standalone-server -y && apt remove firefox-esr konqueror ksysguard plasma-discover partitionmanager kdeconnect termit kwalletmanager -y && apt autoremove -y && apt clean
 kwriteconfig5 --file kscreensaverrc --group Daemon --key Autolock false
 kwriteconfig5 --file kscreensaverrc --group Daemon --key Lock false
 kwriteconfig5 --file kscreenlockerrc --group Daemon --key Autolock false
