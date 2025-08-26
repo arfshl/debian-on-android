@@ -4,6 +4,7 @@ apt-add-repository ppa:mozillateam/firefox-next -r -y
 apt-add-repository ppa:mozillateam/thunderbird-next -r -y
 
 # Add mozilla official repository 
+apt install sudo -y
 echo 'Adding Mozilla Repository...'
 wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 sudo echo 'deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main' >> /etc/apt/sources.list.d/mozilla.list
