@@ -15,10 +15,10 @@ apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-andr
 echo '#!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-proot-distro login debian-mate --user debian-mate' >> /data/data/com.termux/files/usr/bin/startdebian-mate
+proot-distro login debian-mate --user debian-mate' >> /data/data/com.termux/files/usr/bin/debian-mate
 
 # for X11 session
-cat <<EOF > /data/data/com.termux/files/usr/bin/startdebian-mate-x11
+cat <<EOF > /data/data/com.termux/files/usr/bin/debian-mate-x11
 #!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
@@ -33,7 +33,7 @@ proot-distro login debian-mate --shared-tmp -- /bin/sh -c 'export PULSE_SERVER=1
 EOF
 
 # Make all of them executable
-chmod +x /data/data/com.termux/files/usr/bin/startdebian-mate*
+chmod +x /data/data/com.termux/files/usr/bin/debian-mate*
 
 # Install debian under aliases
 proot-distro install debian --override-alias debian-mate
@@ -41,8 +41,8 @@ proot-distro install debian --override-alias debian-mate
 # Setup debian-mate
 proot-distro login debian-mate -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/debian/mate/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
-echo 'To start command line session: startdebian-mate'
-echo 'To start X11 session: startdebian-mate-x11'
+echo 'To start command line session: debian-mate'
+echo 'To start X11 session: debian-mate-x11'
 echo 'To start VNC server: startvnc'
 echo 'To stop VNC server: stopvnc'
 echo 'To restart VNC server: restartvnc'
