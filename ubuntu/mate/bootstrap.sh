@@ -11,17 +11,11 @@ apt upgrade -y -o Dpkg::Options::="--force-confold"
 # Install depedency
 apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-android mesa-zink virglrenderer-mesa-zink virglrenderer-android -y
 
-# PulseAudio at Setup
+# for CLI session
+echo '#!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-
-# PulseAudio at startup on bash.bashrc
-echo 'LD_PRELOAD=/system/lib64/libskcodec.so
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> $PREFIX/etc/bash.bashrc
-
-# Create startup script
-# for CLI session
-printf 'proot-distro login ubuntu-mate --user ubuntu-mate' >> /data/data/com.termux/files/usr/bin/startubuntu-mate
+proot-distro login ubuntu-mate --user ubuntu-mate' >> /data/data/com.termux/files/usr/bin/startubuntu-xfce
 
 # for X11 session
 cat <<EOF > /data/data/com.termux/files/usr/bin/startubuntu-mate-x11
