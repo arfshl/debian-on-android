@@ -1,5 +1,4 @@
 # debian-on-android
-## Project Continued on https://github.com/portadesx
 
 Script to install Ubuntu/Debian on Termux
 ## You Need
