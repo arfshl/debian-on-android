@@ -16,10 +16,10 @@ apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-andr
 echo '#!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-proot-distro login ubuntu-xfce --user ubuntu-xfce' >> /data/data/com.termux/files/usr/bin/startubuntu-xfce
+proot-distro login ubuntu-xfce --user ubuntu-xfce' >> /data/data/com.termux/files/usr/bin/ubuntu-xfce
 
 # for X11 session
-cat <<EOF > /data/data/com.termux/files/usr/bin/startubuntu-xfce-x11
+cat <<EOF > /data/data/com.termux/files/usr/bin/ubuntu-xfce-x11
 #!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
@@ -34,7 +34,7 @@ proot-distro login ubuntu-xfce --shared-tmp -- /bin/sh -c 'export PULSE_SERVER=1
 EOF
 
 # Make all of them executable
-chmod +x /data/data/com.termux/files/usr/bin/startubuntu-xfce*
+chmod +x /data/data/com.termux/files/usr/bin/ubuntu-xfce*
 
 # Install ubuntu under aliases
 proot-distro install ubuntu --override-alias ubuntu-xfce
@@ -42,8 +42,8 @@ proot-distro install ubuntu --override-alias ubuntu-xfce
 # Setup ubuntu-xfce
 proot-distro login ubuntu-xfce -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/xfce/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
-echo 'To start command line session: startubuntu-xfce'
-echo 'To start X11 session: startubuntu-xfce-x11'
+echo 'To start command line session: ubuntu-xfce'
+echo 'To start X11 session: ubuntu-xfce-x11'
 echo 'To start VNC server: startvnc'
 echo 'To stop VNC server: stopvnc'
 echo 'To restart VNC server: restartvnc'

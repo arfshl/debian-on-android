@@ -15,10 +15,10 @@ apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-andr
 echo '#!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-proot-distro login ubuntu-kde --user ubuntu-kde' >> /data/data/com.termux/files/usr/bin/startubuntu-kde
+proot-distro login ubuntu-kde --user ubuntu-kde' >> /data/data/com.termux/files/usr/bin/ubuntu-kde
 
 # for X11 session
-cat <<EOF > /data/data/com.termux/files/usr/bin/startubuntu-kde-x11
+cat <<EOF > /data/data/com.termux/files/usr/bin/ubuntu-kde-x11
 #!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
@@ -31,7 +31,7 @@ proot-distro login ubuntu-kde --shared-tmp -- /bin/sh -c 'export PULSE_SERVER=12
 EOF
 
 # Make all of them executable
-chmod +x /data/data/com.termux/files/usr/bin/startubuntu-kde*
+chmod +x /data/data/com.termux/files/usr/bin/ubuntu-kde*
 
 # Install ubuntu under aliases
 proot-distro install ubuntu --override-alias ubuntu-kde
@@ -39,8 +39,8 @@ proot-distro install ubuntu --override-alias ubuntu-kde
 # Setup ubuntu-kde
 proot-distro login ubuntu-kde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/kde/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
-echo 'To start command line session: startubuntu-kde'
-echo 'To start X11 session: startubuntu-kde-x11'
+echo 'To start command line session: ubuntu-kde'
+echo 'To start X11 session: ubuntu-kde-x11'
 echo 'To start VNC server: startvnc'
 echo 'To stop VNC server: stopvnc'
 echo 'To restart VNC server: restartvnc'
