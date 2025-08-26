@@ -10,39 +10,39 @@ apt update && apt install wget sudo && wget https://raw.githubusercontent.com/ar
 apt update && apt upgrade -y && apt autoremove -y
 
 # Install XFCE desktop, VNC, and basic utility
-apt install xfce4 xfce4-terminal dbus-x11 pulseaudio nano wget curl sudo adduser xdg-user-dirs-gtk xubuntu-wallpapers xfce4-whiskermenu-plugin xubuntu-icon-theme xubuntu-default-settings xubuntu-artwork tigervnc-standalone-server -y && apt clean
+apt install mate-desktop-environment-core caja mate-menus mate-terminal mate-applet-brisk-menu mate-backgrounds mate-dock-applet mate-indicator-applet mate-menus pavucontrol mate-indicator-applet-common mate-tweak mate-applets ubuntu-mate-artwork ubuntu-mate-default-settings ubuntu-mate-icon-themes ubuntu-mate-themes ubuntu-mate-wallpapers ubuntu-mate-wallpapers-common ubuntu-mate-lightdm-theme dbus-x11 pulseaudio nano wget curl sudo adduser tigervnc-standalone-server -y && apt clean
 
 # Adding user and password
-sudo adduser --disabled-password --gecos "ubuntu-xfce" ubuntu-xfce && echo 'ubuntu-xfce:123' | chpasswd && echo 'ubuntu-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
+sudo adduser --disabled-password --gecos "ubuntu-mate" ubuntu-mate && echo 'ubuntu-mate:123' | chpasswd && echo 'ubuntu-mate ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
 # Setup VNC server
 # Create VNC configuration directory
-mkdir -p /home/ubuntu-xfce/.vnc
+mkdir -p /home/ubuntu-mate/.vnc
 
 # Create VNC password file (default 1234567890)
-printf "1234567890" | vncpasswd -f > /home/ubuntu-xfce/.vnc/passwd
-chmod 600 /home/ubuntu-xfce/.vnc/passwd
+printf "1234567890" | vncpasswd -f > /home/ubuntu-mate/.vnc/passwd
+chmod 600 /home/ubuntu-mate/.vnc/passwd
 
 # Create VNC startup script
 echo '#!/bin/sh
 xrdb $HOME/.Xresources
 export PULSE_SERVER=127.0.0.1
 export DISPLAY=:0
-dbus-launch --exit-with-session startxfce4' >> /home/ubuntu-xfce/.vnc/xstartup
+dbus-launch --exit-with-session mate-session' >> /home/ubuntu-mate/.vnc/xstartup
 
 # Create script for starting VNC server
 echo '#!/bin/sh
-export USER=ubuntu-xfce
-export HOME=/home/ubuntu-xfce
+export USER=ubuntu-mate
+export HOME=/home/ubuntu-mate
 vncserver -name remote-desktop -localhost no :0
 echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'' >> /usr/local/bin/startvnc
 
 # Create script for stopping VNC server
 echo '#!/bin/sh
-export USER=ubuntu-xfce
-export HOME=/home/ubuntu-xfce
+export USER=ubuntu-mate
+export HOME=/home/ubuntu-mate
 vncserver -kill :0
-rm -rf /home/ubuntu-xfce/.vnc/localhost:0.pid
+rm -rf /home/ubuntu-mate/.vnc/localhost:0.pid
 rm -rf /tmp/.X0-lock
 rm -rf /tmp/.X11-unix/X0>> /usr/local/bin/stopvnc
 
@@ -57,10 +57,10 @@ chmod +x startvnc
 chmod +x stopvnc
 chmod +x restartvnc
 cd
-chmod +x /home/ubuntu-xfce/.vnc/xstartup
+chmod +x /home/ubuntu-mate/.vnc/xstartup
 
 # Install Apps
-apt update && apt install chromium firefox vlc thunderbird evince ristretto galculator libheif1 xarchiver webp-pixbuf-loader fonts-liberation p7zip mousepad -y && apt clean
+apt update && apt install chromium firefox vlc thunderbird engrampa atril eom mate-calc pluma libheif1 webp-pixbuf-loader fonts-liberation p7zip -y && apt clean
 sudo sed -i 's|chromium --incognito %U|chromium --incognito --no-sandbox %U|' /usr/share/applications/chromium.desktop
 sudo sed -i 's|chromium %U|chromium --no-sandbox %U|' /usr/share/applications/chromium.desktop
 sudo sed -i 's|chromium --new-window %U|chromium --new-window --no-sandbox %U|' /usr/share/applications/chromium.desktop
