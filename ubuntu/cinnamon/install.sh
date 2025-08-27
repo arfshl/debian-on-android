@@ -53,11 +53,11 @@ export DISPLAY=:0
 dbus-launch --exit-with-session cinnamon-session' >> /home/ubuntu-cinnamon/.vnc/xstartup
 
 # Create script for starting VNC server
-echo '#!/bin/sh
+echo "#!/bin/sh
 export USER=ubuntu-cinnamon
 export HOME=/home/ubuntu-cinnamon
 vncserver -name remote-desktop -localhost no :0
-echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'' >> /usr/local/bin/startvnc
+echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'" >> /usr/local/bin/startvnc
 
 # Create script for stopping VNC server
 echo '#!/bin/sh
@@ -66,7 +66,7 @@ export HOME=/home/ubuntu-cinnamon
 vncserver -kill :0
 rm -rf /home/ubuntu-cinnamon/.vnc/localhost:0.pid
 rm -rf /tmp/.X0-lock
-rm -rf /tmp/.X11-unix/X0>> /usr/local/bin/stopvnc
+rm -rf /tmp/.X11-unix/X0' >> /usr/local/bin/stopvnc
 
 # Create script for restarting VNC server
 echo '#!/bin/sh
