@@ -39,6 +39,8 @@ chmod +x /data/data/com.termux/files/usr/bin/ubuntu-lxde*
 proot-distro install ubuntu --override-alias ubuntu-lxde
 
 # Setup ubuntu-lxde
+proot-distro login ubuntu-cinnamon -- /bin/sh -c 'apt update && apt install wget -y'
+
 proot-distro login ubuntu-lxde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
 echo 'To start command line session: ubuntu-lxde'
