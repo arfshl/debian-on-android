@@ -56,11 +56,11 @@ export DISPLAY=:0
 dbus-launch --exit-with-session mate-session' >> /home/ubuntu-mate/.vnc/xstartup
 
 # Create script for starting VNC server
-echo '#!/bin/sh
+echo "#!/bin/sh
 export USER=ubuntu-mate
 export HOME=/home/ubuntu-mate
 vncserver -name remote-desktop -localhost no :0
-echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'' >> /usr/local/bin/startvnc
+echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'" >> /usr/local/bin/startvnc
 
 # Create script for stopping VNC server
 echo '#!/bin/sh
