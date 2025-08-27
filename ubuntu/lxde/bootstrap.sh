@@ -18,7 +18,7 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 proot-distro login ubuntu-lxde --user ubuntu-lxde' >> /data/data/com.termux/files/usr/bin/ubuntu-lxde
 
 # for X11 session
-cat <<EOF > /data/data/com.termux/files/usr/bin/ubuntu-lxde-x11
+cat <<'EOF' > /data/data/com.termux/files/usr/bin/ubuntu-lxde-x11
 #!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
@@ -39,7 +39,7 @@ chmod +x /data/data/com.termux/files/usr/bin/ubuntu-lxde*
 proot-distro install ubuntu --override-alias ubuntu-lxde
 
 # Setup ubuntu-lxde
-proot-distro login ubuntu-cinnamon -- /bin/sh -c 'apt update && apt install wget -y'
+proot-distro login ubuntu-lxde -- /bin/sh -c 'apt update && apt install wget -y'
 
 proot-distro login ubuntu-lxde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
