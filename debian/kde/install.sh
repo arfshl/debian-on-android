@@ -51,7 +51,7 @@ export HOME=/home/debian-kde
 vncserver -kill :0
 rm -rf /home/debian-kde/.vnc/localhost:0.pid
 rm -rf /tmp/.X0-lock
-rm -rf /tmp/.X11-unix/X0>> /usr/local/bin/stopvnc
+rm -rf /tmp/.X11-unix/X0' >> /usr/local/bin/stopvnc
 
 # Create script for restarting VNC server
 echo '#!/bin/sh
