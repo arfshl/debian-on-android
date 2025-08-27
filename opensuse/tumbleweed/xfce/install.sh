@@ -4,6 +4,9 @@
 zypper -n in -t pattern xfce
 zypper -n in dbus-1 xdg-user-dirs xdg-user-dirs-gtk dbus-1-daemon pulseaudio xfce4-*-plugin pavucontrol elementary-xfce-icon-theme tigervnc wget nano curl sudo xfce4-terminal
 
+# Generate dbus machine id
+dbus-uuidgen --ensure
+
 # Adding user and password
 sudo useradd -m opensuse-tumbleweed-xfce && echo 'opensuse-tumbleweed-xfce:123' | chpasswd && echo 'opensuse-tumbleweed-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
