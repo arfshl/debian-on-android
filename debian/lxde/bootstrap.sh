@@ -18,13 +18,13 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 proot-distro login debian-lxde --user debian-lxde' >> /data/data/com.termux/files/usr/bin/debian-lxde
 
 # for X11 session
-cat <<EOF > /data/data/com.termux/files/usr/bin/debian-lxde-x11
+cat <<'EOF' > /data/data/com.termux/files/usr/bin/debian-lxde-x11
 #!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 export XDG_RUNTIME_DIR=${TMPDIR}
-kill -9 \$(pgrep -f "termux.x11")\ 2>/dev/null
-kill -9 \$(pgrep -f "virgl")\ 2>/dev/null
+kill -9 $(pgrep -f "termux.x11") 2>/dev/null
+kill -9 $(pgrep -f "virgl") 2>/dev/null
 proot-distro login debian-lxde --shared-tmp -- /bin/sh -c 'kill -9 $(pgrep -f "x11") 2>/dev/null'
 virgl_test_server_android &
 termux-x11 :0 >/dev/null &
@@ -39,6 +39,8 @@ chmod +x /data/data/com.termux/files/usr/bin/debian-lxde*
 proot-distro install debian --override-alias debian-lxde
 
 # Setup debian-lxde
+proot-distro login debian-lxde-- /bin/sh -c 'apt update && apt install wget -y'
+
 proot-distro login debian-lxde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/debian/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
 echo 'To start command line session: debian-lxde'
