@@ -18,7 +18,7 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 proot-distro login debian-mate --user debian-mate' >> /data/data/com.termux/files/usr/bin/debian-mate
 
 # for X11 session
-cat <<EOF > /data/data/com.termux/files/usr/bin/debian-mate-x11
+cat <<'EOF' > /data/data/com.termux/files/usr/bin/debian-mate-x11
 #!/bin/sh
 LD_PRELOAD=/system/lib64/libskcodec.so
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
@@ -39,6 +39,8 @@ chmod +x /data/data/com.termux/files/usr/bin/debian-mate*
 proot-distro install debian --override-alias debian-mate
 
 # Setup debian-mate
+proot-distro login debian-mate -- /bin/sh -c 'apt update && apt install wget -y'
+
 proot-distro login debian-mate -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/debian/mate/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
 echo 'To start command line session: debian-mate'
