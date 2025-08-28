@@ -19,26 +19,18 @@ mkdir -p /home/opensuse-tumbleweed-xfce/.vnc
 printf "1234567890" | vncpasswd -f > /home/opensuse-tumbleweed-xfce/.vnc/passwd
 chmod 600 /home/opensuse-tumbleweed-xfce/.vnc/passwd
 
-# Create VNC startup script
-echo '#!/bin/sh
-xrdb $HOME/.Xresources
-export PULSE_SERVER=127.0.0.1
-export DISPLAY=:0
-dbus-launch --exit-with-session startxfce4' >> /home/opensuse-tumbleweed-xfce/.vnc/xstartup
-
 # Create script for starting VNC server
 echo "#!/bin/sh
-export USER=opensuse-tumbleweed-xfce
-export HOME=/home/opensuse-tumbleweed-xfce
-vncserver -name remote-desktop -localhost no :0
+Xvnc -rfbauth ~/.vnc/passwd -localhost no :0 &
+export DISPLAY=:0
+export PULSE_SERVER=127.0.0.1
+dbus-launch --exit-with-session startxfce4 &
 echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'" >> /usr/local/bin/startvnc
 
 # Create script for stopping VNC server
 echo '#!/bin/sh
-export USER=opensuse-tumbleweed-xfce
-export HOME=/home/opensuse-tumbleweed-xfce
-vncserver -kill :0
-rm -rf /home/opensuse-tumbleweed-xfce/.vnc/localhost:0.pid
+kill -9 $(pgrep -f "Xvnc") 2>/dev/null
+kill -9 $(pgrep -f "xfce4") 2>/dev/null
 rm -rf /tmp/.X0-lock
 rm -rf /tmp/.X11-unix/X0' >> /usr/local/bin/stopvnc
 
