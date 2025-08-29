@@ -36,7 +36,7 @@ EOF
 # Make all of them executable
 chmod +x /data/data/com.termux/files/usr/bin/opensuse-tumbleweed-xfce*
 
-# Install ubuntu under aliases
+# Install rootfs under aliases
 proot-distro install opensuse --override-alias opensuse-tumbleweed-xfce
 
 # Setup opensuse-tumbleweed-xfce
