@@ -39,7 +39,7 @@ proot-distro install rockylinux --override-alias rocky-mate
 # Setup rocky-mate
 proot-distro login rocky-mate -- /bin/sh -c 'dnf install wget -y'
 
-proot-distro login rocky-mate -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/el/install-xfce.sh && chmod +x install.sh && ./install.sh && rm install.sh'
+proot-distro login rocky-mate -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/el/install-mate.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
 echo 'To start command line session: rocky-mate'
 echo 'To start X11 session: rocky-mate-x11'
