@@ -59,4 +59,4 @@
     apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/el/rocky/kde/remove-full.sh && sh remove-full.sh && rm remove-full.sh
 
 ## Installing Chromium
-    sudo su && wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/el/rocky/chromium-install.sh && sh chromium-install.sh && rm chromium-install.sh
+    sudo su && wget https://github.com/arfshl/proot-distro-desktop/raw/refs/heads/main/el/install-chromium.sh && sh install-chromium.sh && rm install-chromium.sh
