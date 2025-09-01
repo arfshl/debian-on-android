@@ -2,7 +2,7 @@
 
 ## XFCE
 - proot-distro aliases: rocky-xfce
-- Username: rocky-xfce
+- Username: el-xfce
 - `sudo` Password: 123
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
@@ -22,7 +22,7 @@
 
 ## MATE
 - proot-distro aliases: rocky-mate
-- Username: rocky-mate
+- Username: el-mate
 - `sudo` Password: 123
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
@@ -42,7 +42,7 @@
 
 ## KDE Plasma (Heavy)
 - proot-distro aliases: rocky-kde
-- Username: rocky-kde
+- Username: el-kde
 - `sudo` Password: 123
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
