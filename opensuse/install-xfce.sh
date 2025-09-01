@@ -8,16 +8,16 @@ zypper -n in dbus-1 xdg-user-dirs xdg-user-dirs-gtk dbus-1-daemon pulseaudio xfc
 dbus-uuidgen --ensure
 
 # Adding user and password
-sudo useradd -m opensuse-tumbleweed-xfce && echo 'opensuse-tumbleweed-xfce:123' | chpasswd && echo 'opensuse-tumbleweed-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
+sudo useradd -m opensuse-xfce && echo 'opensuse-xfce:123' | chpasswd && echo 'opensuse-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
 
 
 # Setup VNC server
 # Create VNC configuration directory
-mkdir -p /home/opensuse-tumbleweed-xfce/.vnc
+mkdir -p /home/opensuse-xfce/.vnc
 
 # Create VNC password file (default 1234567890)
-printf "1234567890" | vncpasswd -f > /home/opensuse-tumbleweed-xfce/.vnc/passwd
-chmod 600 /home/opensuse-tumbleweed-xfce/.vnc/passwd
+printf "1234567890" | vncpasswd -f > /home/opensuse-xfce/.vnc/passwd
+chmod 600 /home/opensuse-xfce/.vnc/passwd
 
 # Create script for starting VNC server
 echo "#!/bin/sh
@@ -45,4 +45,4 @@ chmod +x startvnc
 chmod +x stopvnc
 chmod +x restartvnc
 cd
-chmod +x /home/opensuse-tumbleweed-xfce/.vnc/xstartup
+chmod +x /home/opensuse-xfce/.vnc/xstartup
