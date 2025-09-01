@@ -2,7 +2,7 @@
 dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf install --nogpgcheck -y https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
-dnf install -y @Xfce @base-x xfce4* wget curl sudo nano pulseaudio pavucontrol xdg-user-dirs tigervnc rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
+dnf install -y @Xfce @base-x xfce4* wget curl sudo nano pulseaudio pavucontrol xdg-user-dirs xdg-user-dirs-gtk tigervnc rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
 
 # Adding user and password
 useradd -m el-xfce && echo 'el-xfce:123' | chpasswd && echo 'el-xfce ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
