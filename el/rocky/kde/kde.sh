@@ -39,7 +39,7 @@ proot-distro install rockylinux --override-alias rocky-kde
 # Setup rocky-kde
 proot-distro login rocky-kde -- /bin/sh -c 'dnf install wget -y'
 
-proot-distro login rocky-kde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/el/install-xfce.sh && chmod +x install.sh && ./install.sh && rm install.sh'
+proot-distro login rocky-kde -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/el/install-kde.sh && chmod +x install.sh && ./install.sh && rm install.sh'
 
 echo 'To start command line session: rocky-kde'
 echo 'To start X11 session: rocky-kde-x11'
