@@ -2,7 +2,7 @@
 dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf install --nogpgcheck -y https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
-dnf install -y @base-x mate-desktop mate-applets mate-backgrounds mate-control-center mate-media mate-menu mate-menus mate-notification mate-panel mate-settings-manager mate-icon-theme mate-power-manager mate-search-tool mate-terminal mate-themes mate-utils caja wget curl sudo nano pulseaudio pavucontrol xdg-user-dirs tigervnc rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
+dnf install -y @base-x mate-desktop mate-applets mate-backgrounds mate-control-center mate-media mate-menu mate-menus mate-notification mate-panel mate-settings-manager mate-icon-theme mate-power-manager mate-search-tool mate-terminal mate-themes mate-utils caja wget curl sudo nano pulseaudio pavucontrol xdg-user-dirs xdg-user-dirs-gtk tigervnc rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
 
 # Adding user and password
 useradd -m el-mate && echo 'el-mate:123' | chpasswd && echo 'el-mate ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
