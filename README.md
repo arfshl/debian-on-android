@@ -1,6 +1,11 @@
 # PRoot Distro Desktop
 Collection of script for easy desktop environment installation on PRoot Distro minimal rootfs, with preconfigured sound and partial 3D acceleration 
 
+## You Need
+- [Termux App](https://github.com/termux/termux-app/releases)
+- [Termux:X11](https://github.com/termux/termux-x11/releases)
+- [VNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+
 
 
 
