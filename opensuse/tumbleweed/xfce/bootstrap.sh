@@ -42,7 +42,7 @@ proot-distro install opensuse --override-alias tumbleweed-xfce
 # Setup tumbleweed-xfce
 proot-distro login tumbleweed-xfce -- /bin/sh -c 'zypper refresh && zypper -n dup && zypper -n in wget'
 
-proot-distro login tumbleweed-xfce -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/opensuse/tumbleweed/xfce/install.sh -O install.sh && chmod +x install.sh && ./install.sh && rm install.sh'
+proot-distro login tumbleweed-xfce -- /bin/sh -c 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/opensuse/install-xfce.sh -O install-xfce.sh && chmod +x install-xfce.sh && ./install-xfce.sh && rm install-xfce.sh'
 
 echo 'To start command line session: tumbleweed-xfce'
 echo 'To start X11 session: tumbleweed-xfce-x11'
