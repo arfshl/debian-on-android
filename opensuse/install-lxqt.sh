@@ -2,7 +2,7 @@
 
 # Install Desktop, VNC, and basic utility
 zypper -n in -t pattern lxqt
-zypper -n in dbus-1 xdg-user-dirs dbus-1-daemon pulseaudio pavucontrol-qt tigervnc wget nano curl sudo
+zypper -n in dbus-1 xdg-user-dirs dbus-1-daemon pulseaudio pavucontrol-qt tigervnc wget nano curl sudo qterminal
 
 # Generate dbus machine id
 dbus-uuidgen --ensure
