@@ -1,4 +1,4 @@
-# Rocky Linux
+# OpenSUSE Tumbleweed
 
 ## XFCE
 - proot-distro aliases: tumbleweed-xfce
