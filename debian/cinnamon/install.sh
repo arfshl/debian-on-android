@@ -14,7 +14,7 @@ echo 'Done'
 apt update && apt upgrade -y && apt autoremove -y
 
 # Install Desktop, VNC, and basic utility
-apt update && apt upgrade -y && apt install cinnamon pavucontrol dbus-x11 pulseaudio nano wget curl sudo adduser tigervnc-standalone-server -y && apt remove file-roller -y && apt autoremove -y && apt clean
+apt update && apt upgrade -y && apt install cinnamon pavucontrol dbus-x11 pulseaudio nano wget curl sudo adduser tigervnc-standalone-server mate-terminal -y && apt remove file-roller -y && apt autoremove -y && apt clean
 
 # Adding user and password
 sudo adduser --disabled-password --gecos "debian-cinnamon" debian-cinnamon && echo 'debian-cinnamon:123' | chpasswd && echo 'debian-cinnamon ALL=(ALL:ALL) ALL' >> /etc/sudoers.d/user
