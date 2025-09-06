@@ -88,7 +88,7 @@
     apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/debian/cinnamon/bootstrap.sh && sh bootstrap.sh && rm bootstrap.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
-    sudo apt update && sudo apt install firefox vlc thunderbird engrampa evince eog mate-calc pluma libheif1 webp-pixbuf-loader fonts-liberation p7zip -y && apt clean
+    sudo apt update && sudo apt install firefox vlc thunderbird engrampa atril eom mate-calc pluma libheif1 webp-pixbuf-loader fonts-liberation p7zip -y && apt clean
 #### Remove (rootfs only)
     apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/debian/cinnamon/remove-rootfs.sh && sh remove-rootfs.sh && rm remove-rootfs.sh
 #### Remove (full)
