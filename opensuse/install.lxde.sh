@@ -30,7 +30,7 @@ echo 'VNC server address: 127.0.0.1:5900 Password: 1234567890'" >> /usr/local/bi
 # Create script for stopping VNC server
 echo '#!/bin/sh
 kill -9 $(pgrep -f "Xvnc") 2>/dev/null
-kill -9 $(pgrep -f "xfce4") 2>/dev/null
+kill -9 $(pgrep -f "lxde) 2>/dev/null
 rm -rf /tmp/.X0-lock
 rm -rf /tmp/.X11-unix/X0' >> /usr/local/bin/stopvnc
 
