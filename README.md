@@ -18,7 +18,7 @@ Collection of script for easy desktop environment installation on PRoot Distro m
 | Chimera Linux    |    | 
 | [Debian](https://github.com/arfshl/proot-distro-desktop/tree/main/debian) | XFCE LXQt MATE LXDE Cinnamon KDE |
 | Fedora           |    |
-| OpenSUSE Tumbleweed     |    |
+| [OpenSUSE Tumbleweed](https://github.com/arfshl/proot-distro-desktop/tree/main/el/rocky)     |  XFCE LXQt MATE LXDE Cinnamon KDE   |
 | [Rocky Linux](https://github.com/arfshl/proot-distro-desktop/tree/main/el/rocky) | XFCE MATE KDE    |
 | [Ubuntu](https://github.com/arfshl/proot-distro-desktop/tree/main/ubuntu) | XFCE LXQt MATE LXDE Cinnamon KDE  
 | Void Linux       |    |
