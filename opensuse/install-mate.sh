@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install Desktop, VNC, and basic utility
-zypper -n in patterns-mate-mate
+zypper -n in -t patterns mate
 zypper -n in dbus-1 xdg-user-dirs xdg-user-dirs-gtk dbus-1-daemon pulseaudio mate-media pavucontrol tigervnc wget nano curl sudo mate-terminal
 
 # Generate dbus machine id
